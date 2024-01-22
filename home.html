@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <script type="text/javascript">
+        function checkServerStatus() {
+            fetch('/check-server-status')
+                .then(response => response.json())
+                .then(data => {
+                    const statusElement = document.getElementById('server-status');
+                    if (data.status === 'running') {
+                        statusElement.innerHTML = '运行中';
+                        statusElement.style.color = 'green';
+                        statusElement.style.fontWeight = 'bold';
+                        statusElement.style.fontSize = 'larger';
+                    } else {
+                        statusElement.innerHTML = '未运行';
+                        statusElement.style.color = 'red';
+                        statusElement.style.fontWeight = 'bold';
+                        statusElement.style.fontSize = 'larger';
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        setInterval(checkServerStatus, 5000);
+    </script>
+</head>
+<body>
+    <h1>欢迎登录</h1>
+    <p>PalServer 状态: <span id="server-status">检查中...</span></p>
+    <a href="/start-server">启动 PalServer</a>
+    <br>
+    <a href="/stop-server">关闭 PalServer</a>
+</body>
+</html>
