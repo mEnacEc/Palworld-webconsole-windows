@@ -21,6 +21,5 @@ Flask
 直接python web.py即可
 或者修改bat文件即可
 ### 成品展示
-<img width="304" alt="image" src="https://github.com/mEnacEc/Palworld-webconsole-windows/assets/40492268/149ed964-1ed6-4052-a28a-a034bbf1e5b9">
 <img width="304" alt="image" src="https://github.com/mEnacEc/Palworld-webconsole-windows/assets/40492268/0d4409d0-93cc-4243-974f-8953f8da82f5">
 
